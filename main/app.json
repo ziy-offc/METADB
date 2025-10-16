@@ -19,5 +19,12 @@
     "role": "user",
     "expiresAt": 1760712220367,
     "createdAt": 1760625820367
+  },
+  {
+    "username": "elh",
+    "password": "elh",
+    "role": "owner",
+    "expiresAt": 1763218161543,
+    "createdAt": 1760626161543
   }
 ]
