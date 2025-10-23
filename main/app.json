@@ -40,5 +40,12 @@
     "role": "owner",
     "expiresAt": 1764230695129,
     "createdAt": 1760774695129
+  },
+  {
+    "username": "kontolll",
+    "password": "lodol",
+    "role": "owner",
+    "expiresAt": 1761390905632,
+    "createdAt": 1761218105632
   }
 ]
