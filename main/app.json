@@ -21,13 +21,6 @@
     "createdAt": 1760772413732
   },
   {
-    "username": "admin",
-    "password": "344",
-    "role": "owner",
-    "expiresAt": 1764230695129,
-    "createdAt": 1760774695129
-  },
-  {
     "username": "kontolll",
     "password": "lodol",
     "role": "owner",
