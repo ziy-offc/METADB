@@ -7,20 +7,6 @@
     "createdAt": 1760220924224
   },
   {
-    "username": "ziy",
-    "password": "kocak",
-    "role": "owner",
-    "expiresAt": 1762833289206,
-    "createdAt": 1760241289206
-  },
-  {
-    "username": "ziy",
-    "password": "kontoll",
-    "role": "user",
-    "expiresAt": 1760712220367,
-    "createdAt": 1760625820367
-  },
-  {
     "username": "elh",
     "password": "elh",
     "role": "owner",
