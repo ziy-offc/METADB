@@ -40,5 +40,12 @@
     "role": "user",
     "expiresAt": 1764163818620,
     "createdAt": 1761571818620
+  },
+  {
+    "username": "fardan",
+    "password": "fardan23",
+    "role": "user",
+    "expiresAt": null,
+    "createdAt": 1761598775499
   }
 ]
