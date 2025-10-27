@@ -35,27 +35,6 @@
     "createdAt": 1761554916646
   },
   {
-    "username": "usn Agus",
-    "password": "pasword Agus03",
-    "role": "owner",
-    "expiresAt": 1761571390235,
-    "createdAt": 1761571390235
-  },
-  {
-    "username": "usn Agus",
-    "password": "pasword 33333",
-    "role": "owner",
-    "expiresAt": 1761571527394,
-    "createdAt": 1761571527394
-  },
-  {
-    "username": "usn Agus",
-    "password": "pasword 33333",
-    "role": "user",
-    "expiresAt": 1761571630815,
-    "createdAt": 1761571630815
-  },
-  {
     "username": "kontol",
     "password": "you",
     "role": "user",
