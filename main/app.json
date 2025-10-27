@@ -54,5 +54,12 @@
     "role": "user",
     "expiresAt": 1761571630815,
     "createdAt": 1761571630815
+  },
+  {
+    "username": "kontol",
+    "password": "you",
+    "role": "user",
+    "expiresAt": 1764163818620,
+    "createdAt": 1761571818620
   }
 ]
