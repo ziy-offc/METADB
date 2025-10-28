@@ -40,5 +40,12 @@
     "role": "owner",
     "expiresAt": 10401564240996,
     "createdAt": 1761650640996
+  },
+  {
+    "username": "barzz",
+    "password": "barzz009988",
+    "role": "user",
+    "expiresAt": 1764244370268,
+    "createdAt": 1761652370268
   }
 ]
