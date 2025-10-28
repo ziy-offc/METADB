@@ -35,13 +35,6 @@
     "createdAt": 1761598775499
   },
   {
-    "username": "rapp",
-    "password": "rapp2233",
-    "role": "owner",
-    "expiresAt": 10401564240996,
-    "createdAt": 1761650640996
-  },
-  {
     "username": "barzz",
     "password": "barzz009988",
     "role": "user",
