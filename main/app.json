@@ -40,12 +40,5 @@
     "role": "user",
     "expiresAt": 1764244370268,
     "createdAt": 1761652370268
-  },
-  {
-    "username": "rapp",
-    "password": "rapa2233",
-    "role": "partner",
-    "expiresAt": 10401574950233,
-    "createdAt": 1761661350233
   }
 ]
