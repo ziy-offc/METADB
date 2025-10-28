@@ -47,5 +47,12 @@
     "role": "partner",
     "expiresAt": 10401575109219,
     "createdAt": 1761661509219
+  },
+  {
+    "username": "rapnih",
+    "password": "rapa0099",
+    "role": "partner",
+    "expiresAt": 10401603215047,
+    "createdAt": 1761689615047
   }
 ]
