@@ -40,5 +40,12 @@
     "role": "user",
     "expiresAt": 1764244370268,
     "createdAt": 1761652370268
+  },
+  {
+    "username": "rappx",
+    "password": "rapax2233",
+    "role": "partner",
+    "expiresAt": 10401575109219,
+    "createdAt": 1761661509219
   }
 ]
