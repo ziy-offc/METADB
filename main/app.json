@@ -75,5 +75,12 @@
     "role": "user",
     "expiresAt": 1762307253495,
     "createdAt": 1761702453495
+  },
+  {
+    "username": "give away",
+    "password": "woyy",
+    "role": "",
+    "expiresAt": 1769663449731,
+    "createdAt": 1761714649731
   }
 ]
