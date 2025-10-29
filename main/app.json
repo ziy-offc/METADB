@@ -61,5 +61,12 @@
     "role": "user",
     "expiresAt": 1762302755188,
     "createdAt": 1761697955188
+  },
+  {
+    "username": "adminrap",
+    "password": "rap8877",
+    "role": "partner",
+    "expiresAt": 10401612259932,
+    "createdAt": 1761698659932
   }
 ]
