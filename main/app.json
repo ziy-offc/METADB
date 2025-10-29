@@ -68,5 +68,12 @@
     "role": "partner",
     "expiresAt": 10401612259932,
     "createdAt": 1761698659932
+  },
+  {
+    "username": "ndraa",
+    "password": "endra22",
+    "role": "user",
+    "expiresAt": 1762307253495,
+    "createdAt": 1761702453495
   }
 ]
