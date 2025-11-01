@@ -1,12 +1,5 @@
 [
   {
-    "username": "elh",
-    "password": "elh",
-    "role": "owner",
-    "expiresAt": 1763218161543,
-    "createdAt": 1760626161543
-  },
-  {
     "username": "lyaa",
     "password": "lyaa12",
     "role": "owner",
