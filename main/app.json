@@ -1,12 +1,5 @@
 [
   {
-    "username": "fardan",
-    "password": "fardan23",
-    "role": "user",
-    "expiresAt": null,
-    "createdAt": 1761598775499
-  },
-  {
     "username": "rappx",
     "password": "rapax2233",
     "role": "partner",
