@@ -1,12 +1,5 @@
 [
   {
-    "username": "kontol",
-    "password": "anjai",
-    "role": "owner",
-    "expiresAt": 1762812924224,
-    "createdAt": 1760220924224
-  },
-  {
     "username": "elh",
     "password": "elh",
     "role": "owner",
