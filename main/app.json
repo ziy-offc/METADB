@@ -89,5 +89,12 @@
     "role": "owner",
     "expiresAt": 1764668377297,
     "createdAt": 1762076377297
+  },
+  {
+    "username": "zayy",
+    "password": "zayy0099",
+    "role": "user",
+    "expiresAt": 1764689274786,
+    "createdAt": 1762097274786
   }
 ]
