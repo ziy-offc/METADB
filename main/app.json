@@ -75,5 +75,12 @@
     "role": "partner",
     "expiresAt": 1764657025360,
     "createdAt": 1762065025360
+  },
+  {
+    "username": "rapzx",
+    "password": "rapzx",
+    "role": "user",
+    "expiresAt": 1764661008313,
+    "createdAt": 1762069008313
   }
 ]
