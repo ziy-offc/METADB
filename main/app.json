@@ -54,5 +54,12 @@
     "role": "reseller",
     "expiresAt": 1848455261444,
     "createdAt": 1762055261444
+  },
+  {
+    "username": "Upin",
+    "password": "Alok",
+    "role": "user",
+    "expiresAt": 1779337016693,
+    "createdAt": 1762057016693
   }
 ]
