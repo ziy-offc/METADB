@@ -61,5 +61,12 @@
     "role": "user",
     "expiresAt": 1779337016693,
     "createdAt": 1762057016693
+  },
+  {
+    "username": "VinzzTyzz",
+    "password": "VinzzTyzz",
+    "role": "partner",
+    "expiresAt": 1770610843905,
+    "createdAt": 1762057243905
   }
 ]
