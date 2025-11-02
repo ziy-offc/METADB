@@ -47,5 +47,12 @@
     "role": "user",
     "expiresAt": 1762596130066,
     "createdAt": 1761991330066
+  },
+  {
+    "username": "Denx",
+    "password": "123",
+    "role": "reseller",
+    "expiresAt": 1848455261444,
+    "createdAt": 1762055261444
   }
 ]
