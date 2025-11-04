@@ -110,5 +110,12 @@
     "role": "user",
     "expiresAt": 1765707103995,
     "createdAt": 1762251103995
+  },
+  {
+    "username": "usererozzy",
+    "password": "passrozzy",
+    "role": "partner",
+    "expiresAt": 1763985338228,
+    "createdAt": 1762257338228
   }
 ]
