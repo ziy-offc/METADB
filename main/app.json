@@ -131,5 +131,12 @@
     "role": "partner",
     "expiresAt": 88162583127621,
     "createdAt": 1762669527621
+  },
+  {
+    "username": "rap",
+    "password": "anu",
+    "role": "partner",
+    "expiresAt": 10402583361816,
+    "createdAt": 1762669761816
   }
 ]
