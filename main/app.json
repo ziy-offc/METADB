@@ -124,5 +124,12 @@
     "role": "partner",
     "expiresAt": 1762669479150,
     "createdAt": 1762669479150
+  },
+  {
+    "username": "rapp",
+    "password": "woyy",
+    "role": "partner",
+    "expiresAt": 88162583127621,
+    "createdAt": 1762669527621
   }
 ]
