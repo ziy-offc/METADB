@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080b12">
+<title>Privet app — Tabungan Ku</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{width:100%;max-width:100%;margin:0;padding:0;overflow-x:hidden}body{color:#fff;font-family:Arial,Helvetica,sans-serif;background:#070a10}
+.bg-video{position:fixed;left:0;top:0;width:100%;height:100%;object-fit:cover;z-index:-10;max-width:none}
+.bg-shade{position:fixed;inset:0;z-index:-9;background:rgba(3,6,12,.62)}
+.glow{position:fixed;width:300px;height:300px;border-radius:50%;filter:blur(80px);background:#557cff38;z-index:-8;left:-100px;top:25%;pointer-events:none}
+.glow2{position:fixed;width:320px;height:320px;border-radius:50%;filter:blur(90px);background:#a45fff30;right:-120px;top:65%;z-index:-8;pointer-events:none}
+
+.nav{
+ position:fixed;z-index:30;top:12px;left:10px;right:10px;width:auto;max-width:none;
+ height:58px;padding:7px 8px;border-radius:19px;
+ display:flex;align-items:center;justify-content:space-between;
+ background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.23);
+ backdrop-filter:blur(25px) saturate(160%);-webkit-backdrop-filter:blur(25px) saturate(160%);
+ box-shadow:0 12px 35px rgba(0,0,0,.35),inset 0 1px rgba(255,255,255,.25)
+}
+.nav-left{display:flex;align-items:center;gap:9px}.brand{font-weight:800;font-size:15px}.brand b{color:#8baeff}
+.hamb{width:43px;height:43px;border-radius:13px;border:1px solid #ffffff25;background:#ffffff12;color:#fff;font-size:21px;line-height:1}
+.nav-links{display:flex;gap:4px}.nav-links a{color:#d3dced;text-decoration:none;font-size:12px;padding:9px 12px;border-radius:11px}.nav-links a:hover{background:#ffffff14}
+.open-btn{color:#fff;text-decoration:none;font-size:12px;font-weight:800;padding:11px 15px;border-radius:13px;background:linear-gradient(135deg,#5d8eff,#765be8);border:1px solid #ffffff35;box-shadow:0 8px 25px #577eff3d}
+
+.container{width:100%;max-width:100%;margin:0 auto;padding:0 12px;overflow:hidden}
+.hero{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 0 40px}
+.hero-inner{width:100%;max-width:680px;margin:0 auto;padding:0 4px}
+.pill{display:inline-block;padding:7px 12px;border-radius:999px;border:1px solid #ffffff27;background:#ffffff10;color:#b9c9ee;font-size:10px;letter-spacing:1px;backdrop-filter:blur(12px)}
+h1{font-size:clamp(52px,13vw,120px);line-height:.87;letter-spacing:-6px;margin:18px 0;background:linear-gradient(110deg,#fff,#b9caff 48%,#9d7dff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{margin:0 auto;width:100%;max-width:620px;padding:0 4px;color:#c1ccdc;font-size:14px;line-height:1.75}
+.buttons{display:flex;justify-content:center;gap:9px;margin-top:25px;flex-wrap:wrap}.button{padding:12px 17px;border-radius:14px;text-decoration:none;font-size:13px;font-weight:800;border:1px solid #ffffff25}.primary{background:linear-gradient(135deg,#5d8eff,#765be8);color:white}.secondary{background:#ffffff0d;color:white}
+.mouse{margin:42px auto 0;width:20px;height:31px;border:1px solid #ffffff55;border-radius:14px}.mouse i{display:block;width:3px;height:7px;border-radius:5px;background:#fff;margin:6px auto;animation:wheel 1.4s infinite}@keyframes wheel{to{transform:translateY(10px);opacity:0}}
+
+.block{padding:100px 0}.section-head{max-width:700px}.section-head h2{font-size:clamp(34px,7vw,62px);letter-spacing:-3px;margin:12px 0}.section-head p{color:#aeb9ca;line-height:1.7;font-size:14px}
+.cards{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:30px}
+.glass{border:1px solid #ffffff1e;background:linear-gradient(145deg,#ffffff16,#ffffff07);backdrop-filter:blur(25px) saturate(150%);-webkit-backdrop-filter:blur(25px) saturate(150%);box-shadow:0 25px 65px #0005,inset 0 1px #ffffff20}
+.card{min-width:0;max-width:100%;border-radius:25px;padding:24px;min-height:225px;overflow:hidden}.icon{font-size:29px}.card h3{margin:18px 0 8px}.card p{font-size:13px;line-height:1.65;color:#aab7c9}
+
+.dashboard{width:100%;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:14px}.panel{min-width:0;max-width:100%;padding:24px;border-radius:27px;min-height:350px}.balance{margin-top:22px;padding:21px;border-radius:21px;background:linear-gradient(135deg,#4e7fffd0,#755be7b5);border:1px solid #ffffff27}.muted{font-size:11px;color:#d5e0f7}.money{font-size:30px;font-weight:900;margin:7px 0}.mini{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}.mini .glass{border-radius:17px;padding:15px}.mini b{display:block;margin-top:6px}
+.chart{height:185px;margin-top:35px;display:flex;align-items:end;gap:9px}.bar{flex:1;border-radius:7px 7px 2px 2px;background:linear-gradient(#83a7ff,#4d5eb5);animation:breathe 3s ease-in-out infinite alternate}@keyframes breathe{to{transform:scaleY(.82)}}
+
+.quote{padding:55px 22px;border-radius:28px;text-align:center;margin:30px 0 80px}.quote p{font-size:clamp(25px,5vw,45px);line-height:1.2;letter-spacing:-1.5px;margin:0}.quote small{display:block;margin-top:16px;color:#9ca9bc}
+footer{text-align:center;color:#7e8b9f;font-size:11px;padding:25px 15px 70px}
+
+.reveal{opacity:0;transform:translateY(65px) scale(.96);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.8,.2,1)}.reveal.left{transform:translateX(-80px)}.reveal.right{transform:translateX(80px)}.reveal.show{opacity:1;transform:none}
+
+.drawer{position:fixed;z-index:60;left:0;top:0;bottom:0;width:min(315px,84vw);padding:20px 15px;transform:translateX(-105%);transition:transform .4s cubic-bezier(.2,.8,.2,1);background:rgba(10,16,29,.86);border-right:1px solid #ffffff24;backdrop-filter:blur(30px) saturate(160%);-webkit-backdrop-filter:blur(30px) saturate(160%);box-shadow:20px 0 60px #0009}.drawer.open{transform:translateX(0)}
+.drawer-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}.drawer-title{font-size:21px;font-weight:850}.drawer-title b{color:#8eaeff}.close{width:39px;height:39px;border-radius:12px;border:1px solid #ffffff22;background:#ffffff0c;color:#fff;font-size:22px}
+.item{display:flex;align-items:center;gap:12px;width:100%;padding:14px;margin:5px 0;border-radius:15px;border:1px solid transparent;background:transparent;color:#c0cbdb;text-align:left;font-size:13px}.item:hover{background:#ffffff10;border-color:#ffffff18;color:#fff}.item span{width:35px;height:35px;border-radius:11px;background:#ffffff0d;display:grid;place-items:center}
+.overlay{position:fixed;inset:0;z-index:55;background:#0008;opacity:0;pointer-events:none;transition:.3s}.overlay.open{opacity:1;pointer-events:auto}
+
+@media(max-width:700px){
+ .nav{left:8px;right:8px}.nav-links{display:none}.container{padding:0 12px}
+ .hero{padding-top:95px}.cards,.dashboard{grid-template-columns:1fr}.block{padding:80px 0}.panel{min-height:300px}
+ h1{letter-spacing:-4px}.money{font-size:27px}
+}
+
+/* PHONE WIDTH FIX */
+*,*::before,*::after{max-width:100%}
+img,video,canvas,svg{max-width:100%}
+h1,h2,h3,p{overflow-wrap:anywhere}
+@media(max-width:700px){
+  .nav{left:8px;right:8px;width:calc(100% - 16px)}
+  .container{padding-left:10px;padding-right:10px}
+  .hero-inner{max-width:100%;padding-left:8px;padding-right:8px}
+  .hero p{max-width:100%;padding:0}
+  .cards,.dashboard{width:100%;grid-template-columns:1fr}
+  .card,.panel{width:100%;min-width:0}
+}
+
+</style>
+</head>
+<body>
+
+<video class="bg-video" autoplay muted loop playsinline preload="auto">
+  <source src="background.mp4" type="video/mp4">
+</video>
+<div class="bg-shade"></div><div class="glow"></div><div class="glow2"></div>
+
+<header class="nav">
+ <div class="nav-left">
+  <button class="hamb" onclick="openMenu()">☰</button>
+  <div class="brand">🔒 Privet <b>app</b></div>
+ </div>
+ <div class="nav-links"><a href="#home">Home</a><a href="#fitur">Fitur</a><a href="#dashboard">Dashboard</a></div>
+ <a class="open-btn" href="#dashboard">Buka</a>
+</header>
+
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+<aside class="drawer" id="drawer">
+ <div class="drawer-head"><div class="drawer-title">🔒 Privet <b>app</b></div><button class="close" onclick="closeMenu()">×</button></div>
+ <button class="item" onclick="go('home')"><span>⌂</span>Beranda</button>
+ <button class="item" onclick="go('fitur')"><span>✦</span>Fitur</button>
+ <button class="item" onclick="go('dashboard')"><span>◉</span>Dashboard</button>
+ <button class="item" onclick="go('laporan')"><span>◌</span>Laporan</button>
+ <button class="item" onclick="go('tentang')"><span>ⓘ</span>Tentang</button>
+</aside>
+
+<div class="container">
+<section class="hero" id="home">
+ <div class="hero-inner">
+  <span class="pill reveal">PRIVET APP · TABUNGAN KU</span>
+  <h1 class="reveal">Tabungan<br>Ku.</h1>
+  <p class="reveal">Kelola tabungan dan lihat progresmu dengan tampilan liquid glass yang responsif. Background video tetap memenuhi seluruh layar.</p>
+  <div class="buttons reveal"><a class="button primary" href="#fitur">Jelajahi fitur ↓</a><a class="button secondary" href="#dashboard">Preview</a></div>
+  <div class="mouse reveal"><i></i></div>
+ </div>
+</section>
+
+<section class="block" id="fitur">
+ <div class="section-head reveal left"><span class="pill">01 · FITUR</span><h2>Rapi. Halus. Hidup.</h2><p>Scroll ke bawah dan setiap bagian bergerak masuk dengan efek depth yang ringan.</p></div>
+ <div class="cards">
+  <article class="glass card reveal"><div class="icon">💰</div><h3>Saldo</h3><p>Pantau saldo, pemasukan, dan pengeluaran dalam satu tampilan.</p></article>
+  <article class="glass card reveal"><div class="icon">💳</div><h3>Transaksi</h3><p>Lihat aktivitas transaksi tanpa membuat tampilan terasa penuh.</p></article>
+  <article class="glass card reveal"><div class="icon">📊</div><h3>Laporan</h3><p>Grafik sederhana untuk melihat perkembangan tabungan.</p></article>
+ </div>
+</section>
+
+<section class="block" id="dashboard">
+ <div class="dashboard">
+  <div class="glass panel reveal left">
+   <span class="pill">02 · DASHBOARD</span><h2 style="font-size:36px;margin:15px 0 0">Saldo kamu.</h2>
+   <div class="balance"><div class="muted">Total tabungan</div><div class="money">Rp 8.864.000</div><div class="muted">Saldo saat ini</div></div>
+   <div class="mini"><div class="glass"><div class="muted">Pemasukan</div><b>Rp 1.200.000</b></div><div class="glass"><div class="muted">Pengeluaran</div><b>Rp 292.000</b></div></div>
+  </div>
+  <div class="glass panel reveal right" id="laporan">
+   <span class="pill">03 · LAPORAN</span><h2 style="font-size:32px;margin:15px 0 0">Perkembangan.</h2>
+   <div class="chart"><i class="bar" style="height:32%"></i><i class="bar" style="height:48%"></i><i class="bar" style="height:41%"></i><i class="bar" style="height:66%"></i><i class="bar" style="height:58%"></i><i class="bar" style="height:90%"></i></div>
+  </div>
+ </div>
+</section>
+
+<section class="block" id="tentang">
+ <div class="glass quote reveal"><span class="pill">04 · PRIVET APP</span><p>“Lihat progresmu,<br>bukan cuma angkanya.”</p><small>Tabungan Ku · Liquid Glass</small></div>
+</section>
+</div>
+<footer>Privet app · Tabungan Ku</footer>
+
+<script>
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")})
+},{threshold:.12});
+document.querySelectorAll(".reveal").forEach((e,i)=>{e.style.transitionDelay=(i%3)*.07+"s";observer.observe(e)});
+function openMenu(){drawer.classList.add("open");overlay.classList.add("open")}
+function closeMenu(){drawer.classList.remove("open");overlay.classList.remove("open")}
+function go(id){closeMenu();document.getElementById(id)?.scrollIntoView({behavior:"smooth",block:"start"})}
+addEventListener("scroll",()=>{
+ const y=scrollY;
+ document.querySelector(".glow").style.transform=`translate(${Math.sin(y*.006)*30}px,${y*.07}px)`;
+ document.querySelector(".glow2").style.transform=`translate(${-Math.sin(y*.005)*30}px,${-y*.04}px)`;
+});
+</script>
+</body>
+</html>
